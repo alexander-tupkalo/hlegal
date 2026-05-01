@@ -1,0 +1,75 @@
+.partners {
+    background: #ffffff;
+    padding: 60px 0;
+
+    &__title {
+        margin: 0 0 30px 0;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        color: $main-regular;
+        text-transform: uppercase;
+
+        @media (min-width: 768px) {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+    }
+
+    /* Сетка логотипов */
+    &__list {
+        display: grid;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        /* МОБИЛКА: 1 колонка, обрезаем после 6 штук */
+        grid-template-columns: 1fr;
+        height: 720px;
+        /* 6 карточек по 120px */
+        overflow: hidden;
+
+        /* ПЛАНШЕТ: 2 колонки, обрезаем после 6 штук */
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            height: 360px;
+            /* 3 ряда по 120px */
+        }
+
+        /* ДЕСКТОП: 4 колонки, показываем все 12 штук */
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(4, 1fr);
+            height: auto;
+            /* Снимаем ограничение по высоте */
+            overflow: visible;
+        }
+    }
+
+    /* Одна цветная плитка */
+    &__item {
+        height: 120px;
+        overflow: hidden;
+    }
+
+    /* Ссылка-обертка */
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    /* Логотип */
+    &__logo {
+        width: 70%;
+        height: auto;
+        object-fit: contain;
+    }
+}
