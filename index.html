@@ -42,7 +42,7 @@
               <li class="header__nav-item"><a href="#" class="header__nav-link">services</a></li>
               <li class="header__nav-item"><a href="#" class="header__nav-link">team</a></li>
               <li class="header__nav-item"><a href="#" class="header__nav-link">publications</a></li>
-              <li class="header__nav-item"><a href="#" class="header__nav-link">contact</a></li>
+              <li class="header__nav-item"><a href="contact.html" class="header__nav-link js-contact-link ">contact</a></li>
             </ul>
           </nav>
           <span class="header__nav-burger js__navopen">
@@ -154,6 +154,88 @@
             </section> 
           </div>
         </div>
+
+        <section class="team">
+    <div class="container">
+        <div class="team__slider swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <article class="team__card">
+                        <a href="./team.html" class="team__image">
+                            <img src="src/img/assets/team-1.jpg" alt="Олександр Олександровський">
+                        </a>
+
+                        <div class="team__content">
+                            <a href="./team.html" class="team__link">
+                                <span class="team__label">команда</span>
+
+                                <svg class="team__arrow" viewBox="0 0 12 12" aria-hidden="true">
+                                    <path
+                                        d="M4 2L8 6L4 10"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+
+                            <h2 class="team__title">
+                                Ми звикли брати на себе відповідальність та завжди гарантуємо чесну,
+                                вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                            </h2>
+
+                            <div class="team__author">
+                                <h3 class="team__name">Олександр Олександровський</h3>
+                                <p class="team__position">Керуючий партнер</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide">
+                    <article class="team__card">
+                        <a href="./team.html" class="team__image">
+                            <img src="src/img/assets/team-2.jpg" alt="Sergey Binn">
+                        </a>
+
+                        <div class="team__content">
+                            <a href="./team.html" class="team__link">
+                                <span class="team__label">команда</span>
+
+                                <svg class="team__arrow" viewBox="0 0 12 12" aria-hidden="true">
+                                    <path
+                                        d="M4 2L8 6L4 10"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+
+                            <h2 class="team__title">
+                                Ми звикли брати на себе відповідальність та завжди гарантуємо чесну,
+                                вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                            </h2>
+
+                            <div class="team__author">
+                                <h3 class="team__name">Sergey Binn</h3>
+                                <p class="team__position">Associate</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
 
       <!-- СЕКЦИЯ ЛОГОТИПОВ -->
          <section class="partners">
@@ -293,5 +375,10 @@
     </div>
 
     <script type="module" src="./src/js/main.js"></script>
+    <div class="page-loader" id="pageLoader">
+      <div class="page-loader__inner">
+        <img src="src/img/logo.svg" alt="Hlegal" class="page-loader__logo">
+      </div>
+    </div>
   </body>
 </html>

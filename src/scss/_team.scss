@@ -1,0 +1,143 @@
+.team {
+    margin-bottom: 60px;
+
+    &__slider {
+        overflow: hidden;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        background-color: $grey-bg;
+        border-radius: 12px;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    &__image {
+        display: block;
+        height: 500px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        &:hover img {
+            transform: scale(1.03);
+        }
+    }
+
+    &__content {
+        padding: 30px;
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: 5px;
+        text-decoration: none;
+        color: $active-regular;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $accent;
+        }
+
+        &:hover .team__arrow {
+            transform: translateX(4px);
+        }
+    }
+
+    &__label {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    &__arrow {
+        width: 12px;
+        height: 12px;
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.25;
+        background: $gradient-red;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__name {
+        margin-bottom: 6px;
+        font-size: 16px;
+        font-weight: 700;
+        color: $grey-text;
+    }
+
+    &__position {
+        font-size: 14px;
+        line-height: 1.57;
+        color: $grey-text;
+    }
+
+    .swiper-pagination {
+        position: static;
+        margin-top: 30px;
+        text-align: center;
+
+        &-bullet {
+            width: 16px;
+            height: 16px;
+            margin: 0 7px !important;
+            background-color: $active-regular;
+            opacity: 0.2;
+            transition: opacity 0.3s ease;
+        }
+
+        &-bullet-active {
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .team {
+        &__title {
+            font-size: 38px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .team {
+        &__card {
+            flex-direction: row;
+            min-height: 344px;
+        }
+
+        &__image {
+            flex: 0 0 400px;
+            height: auto;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+        }
+    }
+}
