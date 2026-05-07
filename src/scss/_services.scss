@@ -13,7 +13,7 @@
         }
     }
 
-    /* Серый лейбл */
+    
     &__label {
         margin: 0 0 10px 0;
         font-size: 14px;
@@ -29,7 +29,7 @@
 
     }
 
-    /* H2 с градиентом */
+    
     &__title {
         margin: 0;
         font-size: 38px;
@@ -48,7 +48,7 @@
         }
     }
 
-    /* Сетка */
+    
     &__list {
         display: grid;
         grid-template-columns: 1fr;
@@ -67,7 +67,7 @@
         }
     }
 
-    /* Карточка */
+    
     &__item {
         transition: transform 0.3s ease;
 
@@ -76,7 +76,7 @@
         }
     }
 
-    /* Иконка */
+    
     &__icon {
         margin-bottom: 20px;
         color: $accent;
@@ -88,7 +88,7 @@
         }
     }
 
-    /* Обертка H3 (убираем дефолтные отступы) */
+
     &__item-title {
         margin: 0 0 15px 0;
         font-size: 20px;
@@ -96,7 +96,6 @@
         line-height: 1.3;
     }
 
-    /* Ссылка H3 */
     &__link {
         color: $active-regular;
         text-decoration: none;
@@ -111,7 +110,6 @@
         }
     }
 
-    /* Текст описания */
     &__text {
         margin: 0;
         font-size: 16px;

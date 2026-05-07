@@ -1,7 +1,6 @@
 .site-footer {
     background: $grey-bg;
     padding: 30px 0;
-    margin-top: 60px;
 
     .container {
         border-top: 2px solid $grey-separator;
@@ -47,7 +46,7 @@
         color: $active-regular;
 
         &:hover {
-         /*   color: $accent; */
+        color: $accent;
         }
     }
 
@@ -61,9 +60,10 @@
         justify-content: center;
         color: $grey-bg;
         font-size: 20px;
+        
 
         &:hover {
-            background: $accent;
+            background: $main-soft;
         }
     }
 
@@ -88,6 +88,7 @@
     .separator-dot {
         display: none;
         color: $grey-text;
+        font-size: 20px;
     }
 
     .copyright {

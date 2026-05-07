@@ -58,18 +58,24 @@
         }
 
         >li {
-            display: flex;
+           /* display: flex;*/
             align-items: center;
+            position: relative;
+            padding-left: 20px;
         }
 
         >li+li::before {
             content: "•";
             margin-right: 12px;
-            color: $grey-text;
+            font-size: 40px;
+            position: absolute;
+            top: -20px;
+            left: 0;
+            
         }
     }
 
-    // Ховер для телефона и адреса (safe approach)
+   
     &__top-line-item a {
         transition: opacity 0.3s ease;
         opacity: 0.7;
@@ -79,7 +85,7 @@
         }
     }
 
-    // Ховер для фейсбука (розовый кружок)
+    
     &__social-link {
         display: flex;
         align-items: center;
@@ -95,7 +101,7 @@
         }
 
         &:hover {
-            background: rgba(240, 20, 90, 0.15);
+           /* background: #fff; */
         }
     }
 
@@ -113,19 +119,17 @@
             transition: background 0.3s ease, color 0.3s ease;
         }
 
-        // Ховер для НЕАКТИВНЫХ языков (УК / РУ)
         &-item:not(&-item--active) a:hover {
-            background: rgba(104, 104, 135, 0.15); // Цвет на основе $main-soft
+            background: rgba(240, 20, 90, 0.15); 
         }
 
-        // Стили и ховер для АКТИВНОГО языка (EN)
         &-item--active a {
-            background: $accent;
+          
             color: #fff;
 
             &:hover {
                 background: rgba(240, 20, 90, 0.15);
-                color: $accent; // Чтобы текст не стал невидимым на розовом фоне
+                color: #fff; 
             }
         }
     }
@@ -143,7 +147,6 @@
             }
         }
 
-        // Гарантированно убираем линию и текст services, если они где-то прописаны
         &::after {
             display: none !important;
         }
@@ -201,29 +204,26 @@
         text-align: center;
         transition: color 0.3s ease, background 0.3s ease;
         
-                    // Активный пункт для бургер-меню
         &--active {
             color: $accent;
         }
         
         &:hover {
-            color: $accent;
+            color: #fff;
             background: #f0f0f5;
         }
         
             @media (min-width: 768px) {
                 padding: 0;
-                        // Жестко сбрасываем мобильные плашки
                 background: transparent;
                 border-radius: 0;
                 color: inherit;
                 font-size: 16px;
         
-                        // Подчеркивание ТОЛЬКО на десктопе
         &:hover,
         &--active {
             color: $accent;
-            background: transparent; // На всякий случай убираем фон при ховере
+            background: transparent; 
             text-decoration: underline;
             text-decoration-color: $accent;
             text-underline-offset: 4px;
