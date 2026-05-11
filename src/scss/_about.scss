@@ -16,7 +16,6 @@
         }
     }
 
-    /* Левая колонка */
     &__values {
         display: flex;
         gap: 30px;
@@ -47,6 +46,7 @@
             font-weight: 700;
             line-height: 1.2;
             color: $grey-text;
+            cursor: pointer; // Добавляем курсор, чтобы было понятно что это кнопка
             transition: .3s ease;
 
             @media (min-width: 768px) {
@@ -57,7 +57,8 @@
                 font-size: 38px;
             }
 
-            &:first-child {
+            // МЕНЯЕМ :first-child НА МОДИФИКАТОР --active
+            &--active {
                 background: $gradient-red;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -73,7 +74,6 @@
         }
     }
 
-    /* Разделитель */
     &__divider {
         width: 100%;
         height: 4px;
@@ -85,10 +85,10 @@
         }
     }
 
-    /* Правая колонка */
     &__description {
         padding-top: 30px;
         text-align: left;
+        position: relative; // Для позиционирования панелей
 
         @media (min-width: 1024px) {
             flex: 1;
@@ -96,6 +96,16 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+        }
+    }
+
+    // НОВЫЕ СТИЛИ ДЛЯ ПАНЕЛЕЙ (ТАБОВ)
+    &__panel {
+        display: none; // Скрываем все панели по умолчанию
+
+        // Показываем только активную
+        &--active {
+            display: block;
         }
     }
 
