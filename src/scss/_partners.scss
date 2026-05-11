@@ -16,7 +16,6 @@
         }
     }
 
-    /* Сетка логотипов */
     &__list {
         display: grid;
         gap: 0;
@@ -24,35 +23,27 @@
         padding: 0;
         list-style: none;
 
-        /* МОБИЛКА: 1 колонка, обрезаем после 6 штук */
         grid-template-columns: 1fr;
         height: 720px;
-        /* 6 карточек по 120px */
-        overflow: hidden;
+        overflow: auto;
 
-        /* ПЛАНШЕТ: 2 колонки, обрезаем после 6 штук */
         @media (min-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
             height: 360px;
-            /* 3 ряда по 120px */
         }
 
-        /* ДЕСКТОП: 4 колонки, показываем все 12 штук */
         @media (min-width: 1024px) {
             grid-template-columns: repeat(4, 1fr);
             height: auto;
-            /* Снимаем ограничение по высоте */
             overflow: visible;
         }
     }
 
-    /* Одна цветная плитка */
     &__item {
         height: 120px;
         overflow: hidden;
     }
 
-    /* Ссылка-обертка */
     &__link {
         display: flex;
         align-items: center;
@@ -66,7 +57,6 @@
         }
     }
 
-    /* Логотип */
     &__logo {
         width: 70%;
         height: auto;
