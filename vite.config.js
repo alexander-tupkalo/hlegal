@@ -59,5 +59,5 @@ export default defineConfig({
 			)
 		},
 	},
-	base: `${rootPath}`,
+	base: `/hlegal`,
 })
